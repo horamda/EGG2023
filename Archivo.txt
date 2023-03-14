@@ -1,0 +1,1 @@
+creamos el primer archivo.txt para enviar a git
