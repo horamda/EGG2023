@@ -23,14 +23,23 @@ let pes= document.getElementsByTagName("p");
 let input= document.getElementById("123");
 let boton= document.getElementById("btn");
 
+boton.onclick=function(){
 titulos.forEach((e)=>{
 e.style.color="red";
+e.hidden=!e.hidden;
 })
 
 for (const e of pes){
     e.innerHTML="EGG";
 }
 
-input.onkeydown=()=>{
-    if(input.value.length>10) input.value="Chiquito";
+input.onkeydown=function(){
+    if(input.value.length>10) 
+    input.value="Chiquito";
 }
+}
+
+const ul=document.getElementById("lista");
+const boton = document.getElementById("btn");
+
+
