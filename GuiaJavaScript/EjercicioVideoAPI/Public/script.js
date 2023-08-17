@@ -10,8 +10,7 @@ async function getAllCharacters() {
 function agregar(nombre, imagenUrl) {
     let li = document.createElement("li");
     li.innerHTML = `<img src="${imagenUrl}" alt="${nombre}"> ${nombre}`
-    divi=document.getElementById("tarjeta");
-    tarjeta.innerHTML = `<img src="${imagenUrl}"`
+
    
     ul.append(li);
 }
@@ -22,7 +21,7 @@ boton.onclick = async function () {
     try {
         let results = await getAllCharacters(); // Espera a que la promesa se resuelva
         results.forEach(e => {
-            agregar(e.image);
+            agregar(e.nombre, e.image);
         });
     } catch (error) {
         console.error("Error al obtener los personajes:", error);
